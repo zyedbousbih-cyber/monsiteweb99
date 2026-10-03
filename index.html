@@ -1,23 +1,16 @@
-
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <!-- 🔧 TEXTE SEO : Titre de la page (onglet navigateur + Google) -->
 <title>Site internet professionnel à 99€ — Sans abonnement, en ligne en 72h</title>
-
 <!-- 🔧 TEXTE SEO : Description (résultat Google) -->
 <meta name="description" content="Votre site internet professionnel pour 99€, paiement unique, sans abonnement. Livré en 72h.">
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
 <!-- 🔧 POLICES : Changer les polices Google Fonts ici si besoin -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-
 <style>
   /* ===== VARIABLES DE COULEURS (TOUT LE SITE) ===== */
   /* 🔧 COULEURS : Modifiez ici les couleurs principales du site */
@@ -38,10 +31,8 @@
     --ff-titre: 'Poppins', sans-serif;  /* 🔧 POLICE : Titres */
     --ff-texte: 'Inter', sans-serif;    /* 🔧 POLICE : Textes */
   }
-
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html { scroll-behavior: smooth; }
-
   body {
     font-family: var(--ff-texte);
     color: var(--bleu-fonce);
@@ -49,25 +40,19 @@
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
   }
-
   h1, h2, h3, h4 { font-family: var(--ff-titre); font-weight: 700; line-height: 1.15; color: var(--bleu-fonce); }
-
   a { text-decoration: none; color: inherit; }
   ul { list-style: none; }
   img { max-width: 100%; display: block; }
   button { font-family: inherit; cursor: pointer; border: none; }
-
   :focus-visible { outline: 3px solid var(--bleu-vif); outline-offset: 2px; }
-
   .container {
     width: 100%;
     max-width: 1160px;
     margin: 0 auto;
     padding: 0 24px;
   }
-
   .eyebrow-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
-
   /* ===== ANIMATIONS ===== */
   @media (prefers-reduced-motion: no-preference) {
     .fade-up {
@@ -83,7 +68,6 @@
   @media (prefers-reduced-motion: reduce) {
     .fade-up { opacity: 1; transform: none; }
   }
-
   /* ===== BARRE D'ANNONCE ===== */
   .bandeau {
     position: sticky;
@@ -105,7 +89,6 @@
     padding: 2px 8px;
     border-radius: 6px;
   }
-
   /* ===== NAVBAR ===== */
   .navbar {
     position: sticky;
@@ -148,7 +131,6 @@
     transition: width 0.25s ease;
   }
   .nav-links a:hover::after { width: 100%; }
-
   .btn {
     display: inline-flex;
     align-items: center;
@@ -180,10 +162,8 @@
   }
   .btn-blanc:hover { transform: translateY(-2px) scale(1.02); }
   .btn-sm { padding: 10px 18px; font-size: 0.88rem; }
-
   .nav-cta { display: flex; align-items: center; }
   .burger { display: none; background: none; }
-
   /* ===== HERO ===== */
   .hero {
     background: linear-gradient(180deg, var(--bleu-clair-2) 0%, var(--blanc) 100%);
@@ -232,7 +212,6 @@
     font-weight: 500;
   }
   .preuve-sociale .etoiles { color: var(--bleu-vif); letter-spacing: 2px; }
-
   /* ===== SECTIONS GENERIQUES ===== */
   section { padding: 84px 0; }
   .section-bleu-clair { background: var(--bleu-clair); }
@@ -248,7 +227,6 @@
   }
   .section-titre p { color: var(--gris); font-size: 1.05rem; }
   .section-bleu-vif .section-titre p { color: rgba(255,255,255,0.85); }
-
   /* ===== INCLUS (CARTES) ===== */
   .grille-inclus {
     display: grid;
@@ -273,7 +251,6 @@
   }
   .carte-inclus h3 { font-size: 1.02rem; margin-bottom: 6px; }
   .carte-inclus p { font-size: 0.88rem; color: var(--gris); }
-
   /* ===== COMPARATIF ===== */
   .tableau-comparatif {
     width: 100%;
@@ -306,7 +283,6 @@
     color: var(--bleu-fonce);
   }
   .tableau-comparatif tbody tr:last-child td { border-bottom: none; }
-
   /* ===== COMMENT CA MARCHE ===== */
   .etapes {
     display: grid;
@@ -324,7 +300,6 @@
   }
   .etape h3 { color: var(--blanc); font-size: 1.15rem; margin-bottom: 8px; }
   .etape p { color: rgba(255,255,255,0.82); font-size: 0.95rem; max-width: 260px; margin: 0 auto; }
-
   /* ===== REALISATIONS ===== */
   .grille-real {
     display: grid;
@@ -354,7 +329,6 @@
   .real-visuel.v3 { background: linear-gradient(135deg, #0A1B3D, #1E5EFF); }
   .real-info { background: var(--blanc); padding: 16px 18px; }
   .real-info .metier { font-size: 0.8rem; color: var(--gris); }
-
   /* ===== TEMOIGNAGES ===== */
   .grille-temoignages {
     display: grid;
@@ -370,7 +344,6 @@
   .carte-temoin .etoiles { color: var(--bleu-vif); letter-spacing: 2px; margin-bottom: 12px; font-size: 0.95rem; }
   .carte-temoin p.avis { font-size: 0.95rem; color: var(--bleu-fonce); margin-bottom: 18px; }
   .carte-temoin .auteur { font-size: 0.85rem; color: var(--gris); font-weight: 600; }
-
   /* ===== FAQ ===== */
   .faq-liste { max-width: 720px; margin: 0 auto; }
   .faq-item {
@@ -408,12 +381,10 @@
     font-size: 0.94rem;
   }
   .faq-item.ouvert .faq-reponse { padding: 0 22px 18px; }
-
   /* ===== CTA FINALE ===== */
   .cta-finale { text-align: center; }
   .cta-finale h2 { color: var(--blanc); font-size: clamp(1.8rem, 3.4vw, 2.4rem); margin-bottom: 10px; }
   .cta-finale > .container > p { color: rgba(255,255,255,0.85); margin-bottom: 40px; font-size: 1.05rem; }
-
   .formulaire {
     max-width: 480px;
     margin: 0 auto;
@@ -450,11 +421,9 @@
     font-size: 0.92rem;
   }
   .alt-contact a { font-weight: 700; color: var(--blanc); text-decoration: underline; }
-
   .form-succes { display: none; text-align: center; padding: 20px 0; }
   .form-succes.actif { display: block; }
   .form-succes .icone-ok { font-size: 2.4rem; margin-bottom: 10px; }
-
   /* ===== FOOTER ===== */
   footer {
     background: var(--bleu-nuit);
@@ -491,14 +460,12 @@
     flex-wrap: wrap;
     gap: 10px;
   }
-
   /* ===== RESPONSIVE ===== */
   @media (max-width: 900px) {
     .grille-inclus { grid-template-columns: repeat(2, 1fr); }
     .etapes { grid-template-columns: 1fr; gap: 44px; }
     .grille-real, .grille-temoignages { grid-template-columns: repeat(2, 1fr); }
   }
-
   @media (max-width: 720px) {
     .nav-links { display: none; }
     .burger {
@@ -517,7 +484,6 @@
 </style>
 </head>
 <body>
-
 <!-- ===== BARRE D'ANNONCE STICKY ===== -->
 <div class="bandeau">
   <!-- 🔧 TEXTE BANDEAU : Phrase d'offre limitée -->
@@ -525,14 +491,11 @@
   <!-- 🔧 CHRONO : Le compte à rebours est géré en bas dans le <script> -->
   <span class="chrono" id="chrono" aria-live="polite">47:59:59</span>
 </div>
-
 <!-- ===== NAVBAR ===== -->
 <header class="navbar" id="navbar">
   <div class="navbar-inner">
-    <!-- 🔧 LOGO TEXTE : Remplacer "monsite99.com" par votre nom / logo texte -->
-    <!-- 🔧 LOGO IMAGE (optionnel) : Remplacer le texte par <img src="votre-logo.png" alt="Nom" height="40"> -->
-    <a href="#accueil" class="logo">monsite<span>99</span>.com</a>
-
+    <!-- 🔧 LOGO TEXTE -->
+    <a href="#accueil" class="logo">monsiteweb<span>99</span>.fr</a>
     <nav class="nav-links" aria-label="Navigation principale">
       <!-- 🔧 TEXTES MENU : Liens de navigation -->
       <a href="#accueil">Accueil</a>
@@ -547,7 +510,6 @@
     </div>
   </div>
 </header>
-
 <!-- ===== HERO ===== -->
 <section class="hero" id="accueil">
   <div class="hero-inner">
@@ -570,7 +532,6 @@
     <p class="preuve-sociale"><span class="etoiles">★★★★★</span> 4,8/5 — 127 clients satisfaits</p>
   </div>
 </section>
-
 <!-- ===== CE QUI EST INCLUS ===== -->
 <section class="section-bleu-clair" id="offre">
   <div class="container">
@@ -582,7 +543,7 @@
     <div class="grille-inclus">
       <!-- 🔧 CARTE 1 : Icône + Titre + Description (répétable) -->
       <div class="carte-inclus fade-up">
-        <div class="icone">🖥️</div> <!-- 🔧 ICÔNE : Emoji ou remplacer par <img> -->
+        <div class="icone">🖥️</div>
         <h3>Site vitrine 1 à 3 pages</h3>
         <p>Accueil, présentation, contact — tout ce qu'il faut pour être trouvé en ligne.</p>
       </div>
@@ -624,7 +585,6 @@
     </div>
   </div>
 </section>
-
 <!-- ===== COMPARATIF ===== -->
 <section>
   <div class="container">
@@ -653,7 +613,6 @@
     </table>
   </div>
 </section>
-
 <!-- ===== COMMENT CA MARCHE ===== -->
 <section class="section-bleu-vif">
   <div class="container">
@@ -684,7 +643,6 @@
     </div>
   </div>
 </section>
-
 <!-- ===== REALISATIONS ===== -->
 <section id="realisations">
   <div class="container">
@@ -694,8 +652,7 @@
       <p>Quelques exemples de sites livrés à nos clients.</p>
     </div>
     <div class="grille-real">
-      <!-- 🔧 RÉALISATION 1 : Remplacer le texte par une vraie image -->
-      <!-- Exemple photo : <img src="photo-boulangerie.jpg" alt="Boulangerie Dupont" style="width:100%;height:150px;object-fit:cover;"> -->
+      <!-- 🔧 RÉALISATION 1 -->
       <div class="carte-real fade-up">
         <div class="real-visuel v1">Boulangerie Dupont</div>
         <div class="real-info"><div class="metier">Boulangerie — Reims</div></div>
@@ -728,7 +685,6 @@
     </div>
   </div>
 </section>
-
 <!-- ===== TEMOIGNAGES ===== -->
 <section class="section-bleu-clair">
   <div class="container">
@@ -737,7 +693,7 @@
       <h2>Ce qu'en disent nos clients</h2>
     </div>
     <div class="grille-temoignages">
-      <!-- 🔧 TÉMOIGNAGE 1 : Avis + Auteur -->
+      <!-- 🔧 TÉMOIGNAGE 1 -->
       <div class="carte-temoin fade-up">
         <div class="etoiles">★★★★★</div>
         <p class="avis">Site livré en 3 jours, exactement comme demandé. Je n'en revenais pas du prix.</p>
@@ -758,7 +714,6 @@
     </div>
   </div>
 </section>
-
 <!-- ===== FAQ ===== -->
 <section id="faq">
   <div class="container">
@@ -767,7 +722,7 @@
       <h2>Questions fréquentes</h2>
     </div>
     <div class="faq-liste fade-up">
-      <!-- 🔧 FAQ 1 : Question + Réponse -->
+      <!-- 🔧 FAQ 1 -->
       <div class="faq-item">
         <button class="faq-question" aria-expanded="false">
           Pourquoi seulement 99€ ?
@@ -834,14 +789,12 @@
     </div>
   </div>
 </section>
-
 <!-- ===== CTA FINALE ===== -->
 <section class="section-bleu-vif cta-finale" id="contact">
   <div class="container">
     <!-- 🔧 TEXTE CTA FINAL -->
     <h2>Prêt à avoir votre site à 99€ ?</h2>
     <p>Réponse en moins de 2h. Sans engagement.</p>
-
     <form class="formulaire fade-up" id="formulaire-contact">
       <!-- 🔧 FORMULAIRE : Labels + placeholders -->
       <div class="champ">
@@ -863,25 +816,22 @@
       <!-- 🔧 TEXTE BOUTON FORMULAIRE -->
       <button type="submit" class="btn btn-blanc">Je commande maintenant</button>
     </form>
-
     <!-- 🔧 MESSAGE SUCCÈS FORMULAIRE -->
     <div class="form-succes" id="form-succes">
       <div class="icone-ok">✅</div>
       <h3 style="color:#fff; margin-bottom:6px;">Merci !</h3>
       <p style="color:rgba(255,255,255,0.85);">Votre demande a bien été reçue. Nous vous répondons sous 2h.</p>
     </div>
-
     <!-- 🔧 TÉLÉPHONE : Remplacer par votre vrai numéro -->
     <p class="alt-contact">Ou appelez-nous : <a href="tel:+33100000000">01 XX XX XX XX</a></p>
   </div>
 </section>
-
 <!-- ===== FOOTER ===== -->
 <footer>
   <div class="container">
     <div class="footer-top">
-      <!-- 🔧 LOGO FOOTER (même que navbar) -->
-      <div class="footer-logo">monsite<span>99</span>.com</div>
+      <!-- 🔧 LOGO FOOTER -->
+      <div class="footer-logo">monsiteweb<span>99</span>.fr</div>
       <ul class="footer-liens">
         <!-- 🔧 LIENS LÉGAUX : Remplacer # par vos vraies pages -->
         <li><a href="#">Mentions légales</a></li>
@@ -897,27 +847,23 @@
     </div>
     <div class="footer-bas">
       <!-- 🔧 COPYRIGHT + EMAIL -->
-      <span>© 2026 monsite99.com. Tous droits réservés.</span>
-      <span>contact@monsite99.com</span>
+      <span>© 2026 monsiteweb99.fr. Tous droits réservés.</span>
+      <span>contact@monsiteweb99.fr</span>
     </div>
   </div>
 </footer>
-
 <script>
   // ===== COMPTE À REBOURS =====
   // 🔧 DURÉE CHRONO : Modifier la durée initiale ici (en secondes)
-  // Exemple : 24h = 24 * 3600 | 47h59m59s = 47 * 3600 + 59 * 60 + 59
   (function() {
     let dureeRestante = 47 * 3600 + 59 * 60 + 59; // 47h59m59s
     const chronoEl = document.getElementById('chrono');
-
     function formaterTemps(s) {
       const h = Math.floor(s / 3600);
       const m = Math.floor((s % 3600) / 60);
       const sec = s % 60;
       return [h, m, sec].map(n => String(n).padStart(2, '0')).join(':');
     }
-
     function tick() {
       if (dureeRestante <= 0) {
         dureeRestante = 47 * 3600 + 59 * 60 + 59; // relance le cycle
@@ -929,7 +875,6 @@
     chronoEl.textContent = formaterTemps(dureeRestante);
     setInterval(tick, 1000);
   })();
-
   // ===== OMBRE NAVBAR AU SCROLL =====
   (function() {
     const navbar = document.getElementById('navbar');
@@ -937,7 +882,6 @@
       navbar.classList.toggle('scrolled', window.scrollY > 10);
     });
   })();
-
   // ===== ACCORDÉON FAQ =====
   (function() {
     const items = document.querySelectorAll('.faq-item');
@@ -960,7 +904,6 @@
       });
     });
   })();
-
   // ===== FADE-IN AU SCROLL =====
   (function() {
     const elements = document.querySelectorAll('.fade-up');
@@ -978,7 +921,6 @@
     }, { threshold: 0.12 });
     elements.forEach(el => observer.observe(el));
   })();
-
   // ===== FORMULAIRE DE CONTACT =====
   // 🔧 FORMULAIRE : Brancher ici votre service d'envoi (Formspree, EmailJS, backend maison, etc.)
   (function() {
@@ -992,8 +934,5 @@
     });
   })();
 </script>
-
 </body>
 </html>
-
-```
