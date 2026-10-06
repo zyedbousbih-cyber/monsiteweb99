@@ -310,4 +310,532 @@
     margin-bottom: 8px;
   }
   .etape h3 { color: var(--blanc); font-size: 1.15rem; margin-bottom: 8px; }
-  .etape p { color: rgba(255,255,255,0.82); font-size: 0.95rem;
+  .etape p { color: rgba(255,255,255,0.82); font-size: 0.95rem; max-width: 260px; margin: 0 auto; }
+
+  /* ===== REALISATIONS ===== */
+  .grille-real {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+  }
+  .carte-real {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--ombre-douce);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .carte-real:hover { transform: translateY(-5px); box-shadow: var(--ombre-bleue); }
+  .real-visuel {
+    height: 150px;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--blanc);
+    font-family: var(--ff-titre);
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 12px;
+  }
+  .real-visuel.v1 { background: linear-gradient(135deg, #1E5EFF, #0A1B3D); }
+  .real-visuel.v2 { background: linear-gradient(135deg, #0066FF, #4B8BFF); }
+  .real-visuel.v3 { background: linear-gradient(135deg, #0A1B3D, #1E5EFF); }
+  .real-info { background: var(--blanc); padding: 16px 18px; }
+  .real-info .metier { font-size: 0.8rem; color: var(--gris); }
+
+  /* ===== TEMOIGNAGES ===== */
+  .grille-temoignages {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+  }
+  .carte-temoin {
+    background: var(--blanc);
+    border-radius: var(--radius-lg);
+    padding: 28px;
+    box-shadow: var(--ombre-douce);
+  }
+  .carte-temoin .etoiles { color: var(--bleu-vif); letter-spacing: 2px; margin-bottom: 12px; font-size: 0.95rem; }
+  .carte-temoin p.avis { font-size: 0.95rem; color: var(--bleu-fonce); margin-bottom: 18px; }
+  .carte-temoin .auteur { font-size: 0.85rem; color: var(--gris); font-weight: 600; }
+
+  /* ===== FAQ ===== */
+  .faq-liste { max-width: 720px; margin: 0 auto; }
+  .faq-item {
+    border: 1px solid var(--gris-clair);
+    border-radius: var(--radius);
+    margin-bottom: 12px;
+    overflow: hidden;
+  }
+  .faq-question {
+    width: 100%;
+    background: var(--blanc);
+    padding: 18px 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: left;
+    cursor: pointer;
+  }
+  .faq-question .signe {
+    color: var(--bleu-vif);
+    font-size: 1.3rem;
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-left: 16px;
+    transition: transform 0.25s ease;
+  }
+  .faq-item.ouvert .faq-question .signe { transform: rotate(45deg); }
+  .faq-reponse {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding: 0 22px;
+    color: var(--gris);
+    font-size: 0.94rem;
+  }
+  .faq-item.ouvert .faq-reponse { padding: 0 22px 18px; }
+
+  /* ===== CTA FINALE ET FORMULAIRE CONTACT ===== */
+  .cta-finale { text-align: center; }
+  .cta-finale h2 { color: var(--blanc); font-size: clamp(1.8rem, 3.4vw, 2.4rem); margin-bottom: 10px; }
+  .cta-finale > .container > p { color: rgba(255,255,255,0.85); margin-bottom: 40px; font-size: 1.05rem; }
+
+  .formulaire {
+    max-width: 520px;
+    margin: 0 auto;
+    background: var(--blanc);
+    border-radius: var(--radius-lg);
+    padding: 32px;
+    text-align: left;
+    box-shadow: 0 30px 60px -20px rgba(0,0,0,0.35);
+  }
+  .champ { margin-bottom: 18px; }
+  .champ label {
+    display: block;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--bleu-fonce);
+    margin-bottom: 6px;
+  }
+  .champ input, .champ textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1.5px solid var(--gris-clair);
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    color: var(--bleu-fonce);
+    transition: border-color 0.18s ease;
+  }
+  .champ input:focus, .champ textarea:focus { border-color: var(--bleu-vif); outline: none; }
+  .champ textarea { resize: vertical; min-height: 90px; }
+  .formulaire .btn { width: 100%; margin-top: 8px; }
+  .champs-duo { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: var(--bleu-nuit);
+    color: rgba(255,255,255,0.7);
+    padding: 48px 0 26px;
+  }
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+  .footer-logo { font-family: var(--ff-titre); font-weight: 800; font-size: 1.05rem; color: var(--blanc); }
+  .footer-logo span { color: var(--bleu-vif); }
+  .footer-liens { display: flex; gap: 26px; flex-wrap: wrap; font-size: 0.88rem; }
+  .footer-liens a:hover { color: var(--blanc); }
+  .footer-bas {
+    border-top: 1px solid rgba(255,255,255,0.12);
+    padding-top: 20px;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 900px) {
+    .grille-inclus { grid-template-columns: repeat(2, 1fr); }
+    .etapes { grid-template-columns: 1fr; gap: 44px; }
+    .grille-real, .grille-temoignages { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 720px) {
+    .nav-links { display: none; }
+    .navbar { top: 0; }
+    .bandeau { font-size: 0.78rem; padding: 8px 10px; }
+    section { padding: 60px 0; }
+    .grille-inclus { grid-template-columns: 1fr; }
+    .grille-real, .grille-temoignages { grid-template-columns: 1fr; }
+    .tableau-comparatif { font-size: 0.85rem; }
+    .tableau-comparatif th, .tableau-comparatif td { padding: 12px 10px; }
+    .champs-duo { grid-template-columns: 1fr; }
+    .footer-top { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== BARRE D'ANNONCE STICKY ===== -->
+<div class="bandeau">
+  🔥 <strong>OFFRE LIMITÉE</strong> : Site internet à 99€ seulement — Sans abonnement
+  <span class="chrono" id="chrono" aria-live="polite">47:59:59</span>
+</div>
+
+<!-- ===== NAVBAR ===== -->
+<header class="navbar" id="navbar">
+  <div class="navbar-inner">
+    <a href="#accueil" class="logo">MonSite<span>Web</span>99.fr</a>
+
+    <nav class="nav-links" aria-label="Navigation principale">
+      <a href="#accueil">Accueil</a>
+      <a href="#offre">Offre</a>
+      <a href="#realisations">Réalisations</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="#contact" class="btn btn-primaire btn-sm">Je commande à 99€</a>
+    </div>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="accueil">
+  <div class="hero-inner">
+    <h1>Votre site web professionnel livré en 72h pour <span class="prix">99 €</span>.</h1>
+    <p class="hero-sub">Paiement unique. Sans abonnement. En ligne en 72h.</p>
+    <div class="badges">
+      <span class="badge">✅ Sans engagement</span>
+      <span class="badge">✅ Support inclus</span>
+      <span class="badge">✅ Propriétaire à 100%</span>
+    </div>
+    <div class="hero-ctas">
+      <a href="tel:+33600000000" class="btn btn-primaire">📞 Appeler le 06 XX XX XX XX</a>
+      <a href="https://wa.me/33600000000" class="btn btn-secondaire" target="_blank" rel="noopener">💬 Envoyer un WhatsApp</a>
+    </div>
+    <p class="preuve-sociale"><span class="etoiles">★★★★★</span> 4,8/5 — 127 clients satisfaits</p>
+  </div>
+</section>
+
+<!-- ===== CE QUI EST INCLUS ===== -->
+<section class="section-bleu-clair" id="offre">
+  <div class="container">
+    <div class="section-titre fade-up">
+      <h2>Tout ce qu'il vous faut pour 99€</h2>
+      <p>Pas de petites lignes, pas de surprise. Voici exactement ce que vous recevez.</p>
+      <p style="margin-top:10px; font-weight:600; color:var(--bleu-fonce);">Un Site Vitrine One-Page complet, avec 4 sections : Accueil, Services, À propos, Contact.</p>
+    </div>
+    <div class="grille-inclus">
+      <div class="carte-inclus fade-up">
+        <div class="icone">🖥️</div>
+        <h3>Site Vitrine One-Page complet</h3>
+        <p>4 sections sur une seule page : Accueil, Services, À propos, Contact — tout ce qu'il faut pour être trouvé en ligne.</p>
+      </div>
+      <div class="carte-inclus fade-up">
+        <div class="icone">📱</div>
+        <h3>Design responsive</h3>
+        <p>Impeccable sur mobile, tablette et ordinateur.</p>
+      </div>
+      <div class="carte-inclus fade-up">
+        <div class="icone">🛠️</div>
+        <h3>Support technique inclus</h3>
+        <p>Une aide par email pour vous accompagner après la livraison.</p>
+      </div>
+      <div class="carte-inclus fade-up">
+        <div class="icone">✏️</div>
+        <h3>Modifications pendant 15 jours</h3>
+        <p>Des ajustements gratuits sur vos textes et photos après livraison.</p>
+      </div>
+      <div class="carte-inclus fade-up">
+        <div class="icone">✉️</div>
+        <h3>Formulaire de contact</h3>
+        <p>Vos clients vous contactent directement depuis le site.</p>
+      </div>
+      <div class="carte-inclus fade-up">
+        <div class="icone">🔍</div>
+        <h3>Référencement SEO de base</h3>
+        <p>Votre site est configuré pour apparaître sur Google.</p>
+      </div>
+      <div class="carte-inclus fade-up">
+        <div class="icone">⚡</div>
+        <h3>Livraison en 72h</h3>
+        <p>Votre site en ligne en 3 jours, pas en 3 mois.</p>
+      </div>
+      <div class="carte-inclus fade-up">
+        <div class="icone">🔑</div>
+        <h3>Propriété totale</h3>
+        <p>Le site est à vous. Aucune dépendance à notre agence.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== COMPARATIF ===== -->
+<section>
+  <div class="container">
+    <div class="section-titre fade-up">
+      <h2>Nous vs les agences classiques</h2>
+      <p>Même qualité, sans le prix et les délais à rallonge.</p>
+    </div>
+    <table class="tableau-comparatif fade-up">
+      <thead>
+        <tr>
+          <th scope="col">Critère</th>
+          <th scope="col">Notre offre — 99€</th>
+          <th scope="col">Agence classique</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Prix</td><td>99€ une fois</td><td>500€ à 1500€</td></tr>
+        <tr><td>Délai</td><td>72h</td><td>3 à 8 semaines</td></tr>
+        <tr><td>Abonnement</td><td>Aucun</td><td>Souvent obligatoire</td></tr>
+        <tr><td>Propriété du site</td><td>100% à vous</td><td>Parfois verrouillée</td></tr>
+        <tr><td>Support après livraison</td><td>Inclus 15 jours</td><td>Souvent facturé</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ===== COMMENT CA MARCHE ===== -->
+<section class="section-bleu-vif">
+  <div class="container">
+    <div class="section-titre fade-up">
+      <h2>Comment ça marche</h2>
+      <p>Trois étapes, aucune complication.</p>
+    </div>
+    <div class="etapes">
+      <div class="etape fade-up">
+        <div class="num">1</div>
+        <h3>Vous commandez</h3>
+        <p>2 minutes pour nous dire ce dont vous avez besoin.</p>
+      </div>
+      <div class="etape fade-up">
+        <div class="num">2</div>
+        <h3>On crée votre site</h3>
+        <p>Notre équipe conçoit votre site en 72h.</p>
+      </div>
+      <div class="etape fade-up">
+        <div class="num">3</div>
+        <h3>Vous êtes en ligne 🚀</h3>
+        <p>Votre site est publié et prêt à recevoir des clients.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== REALISATIONS ===== -->
+<section id="realisations">
+  <div class="container">
+    <div class="section-titre fade-up">
+      <h2>Ils nous ont fait confiance</h2>
+      <p>Quelques exemples de sites livrés à nos clients.</p>
+    </div>
+    <div class="grille-real">
+      <div class="carte-real fade-up">
+        <div class="real-visuel v1">Boulangerie Dupont</div>
+        <div class="real-info"><div class="metier">Boulangerie — Reims</div></div>
+      </div>
+      <div class="carte-real fade-up">
+        <div class="real-visuel v2">Plombier Paris 15</div>
+        <div class="real-info"><div class="metier">Plomberie — Paris</div></div>
+      </div>
+      <div class="carte-real fade-up">
+        <div class="real-visuel v3">Coiffeur Lyon</div>
+        <div class="real-info"><div class="metier">Salon de coiffure — Lyon</div></div>
+      </div>
+      <div class="carte-real fade-up">
+        <div class="real-visuel v2">Électricité Martin</div>
+        <div class="real-info"><div class="metier">Électricien — Nantes</div></div>
+      </div>
+      <div class="carte-real fade-up">
+        <div class="real-visuel v1">Fleurs de Léa</div>
+        <div class="real-info"><div class="metier">Fleuriste — Bordeaux</div></div>
+      </div>
+      <div class="carte-real fade-up">
+        <div class="real-visuel v3">Garage Petit</div>
+        <div class="real-info"><div class="metier">Garage automobile — Toulouse</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TEMOIGNAGES ===== -->
+<section class="section-bleu-clair">
+  <div class="container">
+    <div class="section-titre fade-up">
+      <h2>Ce que disent nos clients</h2>
+      <p>Des professionnels qui nous ont fait confiance.</p>
+    </div>
+    <div class="grille-temoignages">
+      <div class="carte-temoin fade-up">
+        <div class="etoiles">★★★★★</div>
+        <p class="avis">"Mon site a été livré en moins de 3 jours. Il est très pro et mes clients le trouvent facilement. Le rapport qualité/prix est imbattable."</p>
+        <div class="auteur">Marc D. — Artisan Plombier</div>
+      </div>
+      <div class="carte-temoin fade-up">
+        <div class="etoiles">★★★★★</div>
+        <p class="avis">"Service très rapide et efficace. J'avais peur de me lancer sans m'y connaître en informatique, mais l'équipe a tout géré."</p>
+        <div class="auteur">Sophie T. — Coiffeuse à domicile</div>
+      </div>
+      <div class="carte-temoin fade-up">
+        <div class="etoiles">★★★★★</div>
+        <p class="avis">"Pas d'abonnement mensuel caché, le site est à moi. C'est exactement ce que je cherchais pour démarrer mon activité."</p>
+        <div class="auteur">Thomas R. — Consultant</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section id="faq">
+  <div class="container">
+    <div class="section-titre fade-up">
+      <h2>Foire aux questions</h2>
+      <p>Toutes les réponses à vos questions avant de commander.</p>
+    </div>
+    <div class="faq-liste">
+      <div class="faq-item fade-up">
+        <button class="faq-question">Y a-t-il vraiment aucun abonnement ? <span class="signe">+</span></button>
+        <div class="faq-reponse">
+          <p>Exactement. Vous payez 99€ une seule fois pour la création de votre site. Aucun coût récurrent de notre part.</p>
+        </div>
+      </div>
+      <div class="faq-item fade-up">
+        <button class="faq-question">Combien de temps faut-il pour la livraison ? <span class="signe">+</span></button>
+        <div class="faq-reponse">
+          <p>Votre site est entièrement conçu et livré en 72 heures ouvrées à compter de la réception de vos informations.</p>
+        </div>
+      </div>
+      <div class="faq-item fade-up">
+        <button class="faq-question">Puis-je modifier le site après la livraison ? <span class="signe">+</span></button>
+        <div class="faq-reponse">
+          <p>Oui ! Vous bénéficiez de 15 jours de modifications gratuites après la livraison pour ajuster les textes et les photos.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION CONTACT / FORMULAIRE FORMSPREE ===== -->
+<section class="section-bleu-vif cta-finale" id="contact">
+  <div class="container">
+    <h2>Commandez votre site internet dès aujourd'hui</h2>
+    <p>Remplissez les informations ci-dessous et nous vous recontacterons sous 24h.</p>
+
+    <!-- FORMULAIRE RELIÉ À FORMSPREE -->
+    <form class="formulaire fade-up" action="https://formspree.io/f/xgaooenp" method="POST">
+      <div class="champ">
+        <label for="nom">Nom complet</label>
+        <input type="text" id="nom" name="nom" placeholder="Ex: Jean Dupont" required>
+      </div>
+
+      <div class="champ">
+        <label for="entreprise">Nom de votre entreprise</label>
+        <input type="text" id="entreprise" name="entreprise" placeholder="Ex: Dupont Rénovation" required>
+      </div>
+
+      <div class="champs-duo">
+        <div class="champ">
+          <label for="telephone">Téléphone</label>
+          <input type="tel" id="telephone" name="telephone" placeholder="Ex: 06 12 34 56 78" required>
+        </div>
+        <div class="champ">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Ex: contact@dupont.fr" required>
+        </div>
+      </div>
+
+      <div class="champ">
+        <label for="metier">Métier / Activité</label>
+        <textarea id="metier" name="metier_activité" placeholder="Ex: Plombier chauffagiste à Reims. Je souhaite un site pour présenter mes services et recevoir des devis." required></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primaire">Envoyer ma demande à 99€</button>
+    </form>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-logo">MonSite<span>Web</span>99.fr</div>
+      <div class="footer-liens">
+        <a href="#accueil">Accueil</a>
+        <a href="#offre">Offre</a>
+        <a href="#realisations">Réalisations</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+    <div class="footer-bas">
+      <p>&copy; 2026 MonSiteWeb99.fr — Tous droits réservés.</p>
+      <p>Livraison en 72h pour 99€ sans abonnement.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== SCRIPTS ===== -->
+<script>
+  // Compte à rebours 48h
+  (function() {
+    let chronoKey = 'msw99_timer_end';
+    let endTime = localStorage.getItem(chronoKey);
+    if (!endTime) {
+      endTime = Date.now() + 48 * 3600 * 1000;
+      localStorage.setItem(chronoKey, endTime);
+    }
+    
+    function updateChrono() {
+      let now = Date.now();
+      let diff = Math.max(0, endTime - now);
+      let hours = Math.floor(diff / (1000 * 60 * 60));
+      let mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      let secs = Math.floor((diff % (1000 * 60)) / 1000);
+      
+      document.getElementById('chrono').innerText = 
+        String(hours).padStart(2, '0') + ':' + 
+        String(mins).padStart(2, '0') + ':' + 
+        String(secs).padStart(2, '0');
+    }
+    setInterval(updateChrono, 1000);
+    updateChrono();
+  })();
+
+  // FAQ Accordion
+  document.querySelectorAll('.faq-question').forEach(button => {
+    button.addEventListener('click', () => {
+      const item = button.parentElement;
+      const isOpen = item.classList.contains('ouvert');
+      
+      document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('ouvert'));
+      
+      if (!isOpen) {
+        item.classList.add('ouvert');
+      }
+    });
+  });
+
+  // Animation Fade-up au scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
